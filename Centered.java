@@ -2,8 +2,8 @@
 /**
  * Centers a block within the given width
  *
- * @author Samuel A. Rebelsky
- * @version 1.2 of February 2019
+ * @author Maria Rodriguez
+ * @version 1.0 September 22, 2023
  */
 public class Centered implements TextBlock {
   // +--------+------------------------------------------------------------
