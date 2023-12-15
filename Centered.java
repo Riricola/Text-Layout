@@ -2,8 +2,8 @@
 /**
  * Centers a block within the given width
  *
- * @author Maria Rodriguez
- * @version 1.0 September 22, 2023
+ * @author Samuel A. Rebelsky
+ * @version 1.2 of February 2019
  */
 public class Centered implements TextBlock {
   // +--------+------------------------------------------------------------
@@ -46,40 +46,27 @@ public class Centered implements TextBlock {
 
     //if width is less than the length of the string
     if(width < this.contents.width()){
-      //if((i >= 0) && (i <= h)){
         return this.contents.row(i - 1).substring(0, width);
-      //} else{
     
     } else if(width > this.contents.width()){ //if the width is greater than the length of the string
         return TBUtils.spaces((width / 2) + (width % 2)) + this.contents.row(i - 1) + TBUtils.spaces(width / 2);
     } else {
         throw new Exception("Invalid row " + i);
-      }
-  }
+      } // else
+  } // row
 
   /**
    * Determine how many rows are in the block.
    */
   public int height(){
     return 2 + this.contents.height();
-  }
+  } // height
 
   /**
    * Determine how many columns are in the block.
    */
   public int width(){
     return this.contents.width();
-  }
+  } // width
 
-
-  // public String eqv(TextBlock other){
-  //   String result = "";
-  //   if(contents = other.contents){
-  //     result = "true";
-  //   } else {
-  //     result = "false";
-  //   }
-  // }
-
-
-}
+} // Centered

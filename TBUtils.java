@@ -66,7 +66,7 @@ public class TBUtils {
   /**
    * Check if two blocks contains the same lines.
    */
-  static void equal(TextBlock block1, TextBlock block2) throws Exception{
+  public static void equal(TextBlock block1, TextBlock block2) throws Exception{
     int h1 = block1.height();
 
     //this is done in case one of the boxes is greater than the other
@@ -80,33 +80,28 @@ public class TBUtils {
           result = "true";
         } else{
           result = "false";
-        }
+        } // if /else
       }
     } else {
       result = "false";
-    }
+    } // if/else
 
     pen.println(result);
-  }
+  } // equals
 
   /**
    * Check if two blocks are built the same way.
    */
   public static boolean eqv(TextBlock block1, TextBlock block2){
-    
-  }
+    return block1 == block2;
+  } // eqv
 
   /**
    * Check if two blocks have the same space in memory.
    */
-  static void eq(TextBlock block1, TextBlock block2){
-    PrintWriter pen = new PrintWriter(System.out, true);
-    if(block1 == block2){
-      pen.println("true");
-    } else{
-      pen.println("false");
-    }
-   }
+  public static boolean eq(TextBlock block1, TextBlock block2){
+    return block1 == block2;
+   } // eq
 
 
 } // class TBUtils
